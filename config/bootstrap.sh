@@ -26,4 +26,4 @@ su - vagrant
 exit
 
 # Install and configure Supervisor
-./supervisor.sh
+/vagrant/config/supervisor.sh

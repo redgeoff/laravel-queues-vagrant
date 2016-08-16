@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cd /vagrant/config
+
 apt-get install -y supervisor
 
 cp laravel-worker.conf /etc/supervisor/conf.d
