@@ -23,12 +23,13 @@ Set Up
     $ git clone https://github.com/redgeoff/laravel-queues-vagrant.git
     $ cd laravel-queues-vagrant
     $ vagrant up
-    $ vagrant ssh
 
 
 Dispatching Jobs
 ---
 
-    $ php /vagrant/MyDispatcher.php # schedules a job
+    $ vagrant up
+    $ vagrant ssh
+    $ php php/MyDispatcher.php # Schedules a job. You can check app/mylog.txt for an entry from the job
 
 This Vagrant config sets up Supervisor which will run 8 processes to execute your jobs. Note: Supervisor automatically restarts are a system reboot.

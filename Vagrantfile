@@ -13,6 +13,6 @@ Vagrant.configure("2") do |config|
   end
 
   # Bootstrap script for configuring VM
-  config.vm.provision :shell, path: "bootstrap.sh"
+  config.vm.provision :shell, path: "config/bootstrap.sh"
 
 end

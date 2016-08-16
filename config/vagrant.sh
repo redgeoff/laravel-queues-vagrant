@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 
-cd /vagrant
+cd /vagrant/config
+
+# Config default directory when vagrant ssh
+echo 'cd /vagrant' >> /home/vagrant/.profile
 
 # Install composer
 ./composer.sh
