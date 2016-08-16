@@ -25,10 +25,11 @@ class MyDispatcher
 {
   use DispatchesJobs;
 
-  public function dispatch() {
+  // Can't name "dispatch" as this will cause problems
+  public function schedule() {
     $this->dispatch(new SendEmail());
   }
 }
 
 $dispatcher = new MyDispatcher();
-$dispatcher->dispatch();
+$dispatcher->schedule();
