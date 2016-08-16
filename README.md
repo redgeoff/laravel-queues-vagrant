@@ -4,7 +4,7 @@ A quick way to get a test environment with Laravel Queues working. This environm
 
 This project sets up a new Laravel project named blog.
 
-This project uses an non-Laravel script, MyDispatcher to demonstrate how the dispatcher can be called from an external PHP script. You can however use the dispatcher from a Laravel controller, command or other standard Laravel construct.
+This project uses MyDispatcher, which is external to Laravel, to demonstrate how the dispatcher can be called outside the Laravel env. You can however, use the dispatcher from a Laravel controller, Command or other standard Laravel construct.
 
 See https://laravel.com/docs/5.2/queues for more info about Laravel Queues.
 

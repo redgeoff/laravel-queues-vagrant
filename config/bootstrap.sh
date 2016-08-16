@@ -27,8 +27,3 @@ exit
 
 # Install and configure Supervisor
 ./supervisor.sh
-apt-get install -y supervisor
-cp /vagrant/supervisor/laravel-worker.conf /etc/supervisor/conf.d
-sudo supervisorctl reread
-sudo supervisorctl update
-sudo supervisorctl start laravel-worker:*
