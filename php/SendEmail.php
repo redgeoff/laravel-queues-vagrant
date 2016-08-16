@@ -22,7 +22,7 @@ class SendEmail extends Job implements ShouldQueue
     }
 
     protected function appendToFile($str) {
-      echo $str; // just for debug
+      echo "$str\n\n"; // just for debug
       file_put_contents('/vagrant/app/mylog.txt', date('c') . ": $str\n", FILE_APPEND);
     }
 
