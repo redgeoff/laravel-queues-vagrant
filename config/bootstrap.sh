@@ -19,11 +19,7 @@ sudo apt-get -y install mysql-server
 apt-get install -y php5-mysql
 
 # Run as vagrant user
-su - vagrant
-/vagrant/config/vagrant.sh
-
-# Switch back to root
-exit
+su -l -c /vagrant/config/vagrant.sh vagrant
 
 # Install and configure Supervisor
 /vagrant/config/supervisor.sh
