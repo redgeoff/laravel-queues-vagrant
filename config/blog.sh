@@ -25,6 +25,9 @@ if [ ! -d "blog" ]; then
   # Copy our job to the Laravel project
   cp ../../php/SendEmail.php app/Jobs
 
+  # Copy our model to the Laravel project
+  cp ../../php/Person.php app
+
 fi
 
 cd /vagrant/app/blog

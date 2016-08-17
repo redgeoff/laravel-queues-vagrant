@@ -9,6 +9,18 @@ This project uses MyDispatcher, which is external to Laravel, to demonstrate how
 See https://laravel.com/docs/5.2/queues for more info about Laravel Queues.
 
 
+Job
+---
+
+See app/blog/Jobs/SendEmail.php
+
+
+Dispatcher
+---
+
+See php/MyDispatcher.php
+
+
 Install Vagrant, VirtualBox and git
 ---
 
@@ -23,13 +35,19 @@ Set Up
     $ git clone https://github.com/redgeoff/laravel-queues-vagrant.git
     $ cd laravel-queues-vagrant
     $ vagrant up
+    $ vagrant ssh
 
 
 Dispatching Jobs
 ---
 
-    $ vagrant up
-    $ vagrant ssh
     $ php php/MyDispatcher.php # Schedules a job. You can check app/mylog.txt for an entry from the job
 
 This Vagrant config sets up Supervisor which will run 8 processes to execute your jobs. Note: Supervisor automatically restarts are a system reboot.
+
+
+Running the Queue Manually
+---
+
+    $ sudo supervisorctl stop laravel-worker:*
+    $ php artisan queue:listen

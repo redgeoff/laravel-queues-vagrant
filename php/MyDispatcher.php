@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use App\Jobs\SendEmail;
+use App\Person;
 
 
 ////////// Boot Laravel //////////
@@ -27,7 +28,7 @@ class MyDispatcher
 
   // Can't name "dispatch" as this will cause problems
   public function schedule() {
-    $this->dispatch(new SendEmail());
+    $this->dispatch(new SendEmail(new Person('Superman')));
   }
 }
 
